@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import '../Styles/App.css'
 const Add = () => {
     const [juego, setJuego] = useState({
         Nombre:"",
@@ -31,13 +31,36 @@ const Add = () => {
     console.log(juego)
     return (
         <div className='from'>
-            <h1>Agregar juego</h1>
-            <input type="text" placeholder='Nombre' onChange={handleChange} name='Nombre'/>
-            <input type="text" placeholder='Plataforma' onChange={handleChange} name='Plataforma'/>
-            <input type="date" placeholder='Fecha de lanzamiento' onChange={handleChange} name='FechaLanzamiento'/>
-            <input type="text" placeholder='Descripcion' onChange={handleChange} name='Descripcion'/>
-            <input type="text" placeholder='Portada' onChange={handleChange} name='Portada'/>
-            <button onClick={handleClick}>Agregar</button>
+            <div className='header'>
+                <h1>Agregar juego</h1>
+            </div>
+            <div className='box'>
+                <p>Nombre:</p>
+                <input type="text" placeholder='Nombre' onChange={handleChange} name='Nombre'/>
+            </div>
+            <div className='box'>
+                <p>Plataforma:</p>
+                <input type="text" placeholder='Plataforma' onChange={handleChange} name='Plataforma'/>
+            </div>
+            <div className='box'>
+                <p>Fecha de lanzamiento:</p>
+                <input type="date" placeholder='Fecha de lanzamiento' onChange={handleChange} name='FechaLanzamiento'/>
+            </div>
+            
+            <div className='box'>
+                <p>Descripción:</p>
+                <input type="text" placeholder='Descripcion' onChange={handleChange} name='Descripcion'/>
+            </div>
+            
+            <div className='box'>
+                <p>Link a portada:</p>
+                <input type="text" placeholder='Portada' onChange={handleChange} name='Portada'/>
+            </div>
+            
+            <div className='box'>
+            <button className='ultimo' onClick={handleClick}>Agregar</button>
+            </div>
+            
         </div>
     )
 }
