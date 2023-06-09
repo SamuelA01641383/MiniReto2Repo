@@ -42,7 +42,7 @@ const Juegos = () => {
                 <div className="juego" key={juego.idJuegos}>
                     <div className='contenedor'>
                     <div >
-                    {juego.portada && <img  className ='imagebox' src={juego.portada} alt=""/>}
+                    <img  className ='imagebox' src={juego.Portada}/>
                     </div>
                     <div className='texto'>
                     <h2>{juego.Nombre}</h2>
