@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import '../Styles/App.css'
+import { Link } from 'react-router-dom';
 
 const Update = () => {
     const [juego, setJuego] = useState({
@@ -36,6 +37,7 @@ const Update = () => {
 
     console.log(juego)
     return (
+        <div className='bg2'>
         <div className='from'>
             <div className='header'>
                 <h1>Actualizar juego</h1>
@@ -62,8 +64,10 @@ const Update = () => {
                 <p>Link a portada:</p>
                 <input type="text" placeholder='Portada' onChange={handleChange} name='Portada'/>
             </div>
-        
-            <button  className='ultimo' onClick={handleClick}>Actualizar juego</button>
+            
+            <button  className='ultimo' onClick={handleClick}><a>Actualizar juego</a></button>
+            <button><Link to={`/`}><a>Regresar</a></Link></button>
+        </div>
         </div>
     )
 }

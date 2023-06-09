@@ -30,7 +30,7 @@ const Juegos = () => {
     }
     console.log(juegos)
     return (
-        <div>
+        <div className='bg'>
         <div className='header'>
             <h1>Bases de datos de juegos </h1>
         </div>
@@ -42,8 +42,7 @@ const Juegos = () => {
                 <div className="juego" key={juego.idJuegos}>
                     <div className='contenedor'>
                     <div >
-                       <img className='imgbox' src='https://store-images.s-microsoft.com/image/apps.7759.14335040691238971.69596c0b-00e0-49eb-a6ce-2535ef602b5e.d8780f81-4399-46f1-bd6d-4027f002304d?q=90&w=480&h=270'></img>
-                    {juego.portada && <img src={juego.portada} alt=""/>}
+                    {juego.portada && <img  className ='imagebox' src={juego.portada} alt=""/>}
                     </div>
                     <div className='texto'>
                     <h2>{juego.Nombre}</h2>
@@ -52,14 +51,14 @@ const Juegos = () => {
                     <h3>Descripción: {juego.Descripcion}</h3>
                     </div>
                     <button className="delete" onClick={()=>handleDelete(juego.idJuegos)}><a>Borrar juego</a></button>
-                    <button className="update"><Link to={`/update/${juego.idJuegos}`}>Actualizar Juego</Link></button>
+                    <button className="update"><Link to={`/update/${juego.idJuegos}`}><a>Actualizar Juego</a></Link></button>
                     
                     </div>
                 </div>
                 
             ))}
         </div>
-        <div >
+        <div className='bg'>
             <button className='ultimo'><Link to="/add">Añadir un juego</Link></button>
         </div>
         

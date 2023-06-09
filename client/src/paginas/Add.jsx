@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../Styles/App.css'
+import { Link } from 'react-router-dom';
 const Add = () => {
     const [juego, setJuego] = useState({
         Nombre:"",
@@ -30,7 +31,7 @@ const Add = () => {
 
     console.log(juego)
     return (
-        <div className='from'>
+        <div className='bg2'>
             <div className='header'>
                 <h1>Agregar juego</h1>
             </div>
@@ -57,8 +58,9 @@ const Add = () => {
                 <input type="text" placeholder='Portada' onChange={handleChange} name='Portada'/>
             </div>
             
-            <div className='box'>
-            <button className='ultimo' onClick={handleClick}>Agregar</button>
+            <div>
+            <button className='ultimo' onClick={handleClick}> <a>Agregar</a></button>
+            <button><Link to={`/`}><a>Regresar</a></Link></button>
             </div>
             
         </div>
