@@ -1,14 +1,23 @@
 import express from "express"
 import mysql from "mysql"
 import cors from "cors"
+import{PORT} from './config.js'
+import{
+    DB_HOST,
+    DB_USER,
+    DB_PASSWORD, 
+    DB_NAME, 
+    DB_PORT
+} from './config.js'
 
 const app = express()
 
 const base = mysql.createConnection({
-    host:"localhost",
-    user:"Samuel",
-    password:"12345",
-    database:"videojuegos"
+    host: DB_HOST,
+    user: DB_USER,
+    password: DB_PASSWORD,
+    database: DB_NAME,
+    port: DB_PORT
 })
 
 app.use(express.json())
@@ -62,6 +71,6 @@ app.put("/juegos/:id", (req,res)=>{
     });
 });
 
-app.listen(8800, ()=>{
-    console.log("The Backend lives.. FOR EVER");
+app.listen(PORT, ()=>{
+    console.log("The Backend lives.. FOR EVER", PORT);
 })
