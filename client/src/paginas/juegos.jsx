@@ -28,13 +28,13 @@ const Juegos = () => {
             console.log(err)
         }
     }
-    console.log(juegos)
+    console.log(juegos)   
+
     return (
         <div className='bg'>
         <div className='header'>
             <h1>Bases de datos de juegos </h1>
         </div>
-        
         
         <div className='juegos'>
             {
@@ -47,7 +47,7 @@ const Juegos = () => {
                     <div className='texto'>
                     <h2>{juego.Nombre}</h2>
                     <h3>Plataforma: {juego.Plataforma}</h3>
-                    <h3>Fecha de lanzamiento: {juego.FechaLanzamiento}</h3>
+                    <h3>Fecha de lanzamiento: {juego.FechaLanzamiento.split("T")[0]}</h3>
                     <h3>Descripción: {juego.Descripcion}</h3>
                     </div>
                     <button className="delete" onClick={()=>handleDelete(juego.idJuegos)}><a>Borrar juego</a></button>
