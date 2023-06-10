@@ -30,6 +30,7 @@ const Juegos = () => {
     }
     console.log(juegos)
     return (
+        <div className='bg2'>
         <div className='bg'>
         <div className='header'>
             <h1>Bases de datos de juegos </h1>
@@ -41,8 +42,8 @@ const Juegos = () => {
             juegos.map(juego=>(
                 <div className="juego" key={juego.idJuegos}>
                     <div className='contenedor'>
-                    <div >
-                    {juego.portada && <img  className ='imagebox' src={juego.portada} alt=""/>}
+                    <div>   
+                    <img  className ='imgbox' src={juego.Portada}/>
                     </div>
                     <div className='texto'>
                     <h2>{juego.Nombre}</h2>
@@ -62,6 +63,7 @@ const Juegos = () => {
             <button className='ultimo'><Link to="/add">Añadir un juego</Link></button>
         </div>
         
+        </div>
         </div>
     )
 }

@@ -13,7 +13,7 @@ p{
 .bg2{
 height: 100vh;
 width: 100%;
-background-color: rgb(76, 72, 86);
+background-color: rgb(52,50,57);
 }
 .App{
   height: 100vh;
@@ -65,7 +65,11 @@ a{
 .imgbox{
   float: left;
   width: 20%;
-  background-color: chartreuse;
+  height: 25vh;
+  margin: 1.2vh;
+  border-color: rgb(72,85,104);
+  border-style: groove;
+  border-radius: 5px;
 }
 .texto{
   float: left;
