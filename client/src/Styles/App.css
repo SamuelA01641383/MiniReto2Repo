@@ -43,8 +43,9 @@ background-color: rgb(52,50,57);
   border-bottom-style: solid;
   border-width: 0.5vh;
   margin-bottom: 1.25vh;
-  
+  height: auto;
 }
+
 button{
 
   width: 10vh;
@@ -73,6 +74,8 @@ a{
 }
 .texto{
   float: left;
+  width: 60%;
+
 }
 h2{
   font-size: 4vh;
